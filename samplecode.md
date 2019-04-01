@@ -57,6 +57,7 @@ SELECT ?person ?personLabel
     ?role wdt:P279 wd:Q1623534.
     ?role wdt:P1001 ?pref.
     ?pref wdt:P429 ?code.
+    FILTER EXISTS { ?st pq:P580 ?begindate }
     FILTER NOT EXISTS { ?st pq:P582 ?enddate }
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "ja,en".
@@ -64,7 +65,7 @@ SELECT ?person ?personLabel
 } ORDER BY ?code
 ```
 
-実行▶ http://tinyurl.com/y3s4hnv7
+実行▶ http://tinyurl.com/y3o27keb
 
 ### 第48回衆議院議員総選挙における当選者
 
